@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    /*
+    const product = {
+      name: 'socks',
+      price: 1090
+    };
+    console.log (typeof product);
+    console.log (product.name);
+    console.log (product.price);
+
+    product.name = 'cotton socks';
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(product);
+    
+
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day',
+      rating: {
+        stars: 4.5,
+        count:87
+      },
+      fun: function function1() {
+        console.log('function inside object')
+      }
+    };
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
+
+    // bracket notation lets us use properties that normally dont work with dot notation
+    // between the brackets, you can use a string, variable, calculation or anything that results in a value
+
+    console.log(product2.rating.count);
+    product2.fun();    //this is a function inside an object.
+    //Function inside = Method
+
+    console.log(typeof console);
+    console.log(typeof console.log)   //log is a function that is saved inside an object, a method
+
+    //Console.log and Math.random are Built-in-objects
+    //other built-in objects are JSON and localStorage
+
+    //JSON does not support single quotes, all properties and strings must be typed in double quotes
+    //JSON does not supprt functions
+
+    console.log(JSON.stringify(product2));     //this is how to convert a javascript object to JSON
+
+
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));    //this is how to convert JSON to Javascript object
+    */
+    
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());  //Auto-Boxing
+
+    const object1 = {
+      message: 'hello'
+    };
+
+    const object2 = object1;
+
+    object1.message = 'Good job!';
+    console.log(object1);  //notice that we are still ab to change the values inside an object even thought it is declared using const
+    console.log(object2);
+
+    //we cant compare objects directly
+    const object3 = {
+      message: 'Good job!'
+    };
+    console.log(object3 === object1);
+    console.log(object2 === object1);
+    //when comparing two variables that contain objects, you are actually comparing their references, not the values inside
+
+    const object4 = {
+      message: 'Good job!',
+      price: 799
+    };
+    //const message = object4.message;
+    //if the variable name and the property name are the same, we have a shortcut for this
+    const { message, price } = object4; //this shortcut is called destructuring
+    console.log(message);
+    console.log(price);
+
+    //shorthand property
+    const object5 = {
+      //message: message //if the property and the variable name are the same, we can just type it out once
+      message,  //this is called shorthand property
+
+      //shorthand method
+      // method: function function1() {
+      //   console.log('method');
+      // }   //this does the same thing as
+
+      method() {
+        console.log('method');
+      }
+    };
+    console.log(object5);
+    object5.method();
+  </script>
+</body>
+</html>

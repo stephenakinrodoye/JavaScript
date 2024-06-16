@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .add-to-cart, .request-now, .schedule-for-later {
+      border: none;
+    }
+
+    .add-to-cart {
+      background-color: yellow;
+      padding: 5px 30px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .request-now {
+      background-color: black;
+      color: white;
+      padding: 5px 20px;
+      border-radius: 5px;
+    }
+
+    .schedule-for-later {
+      background-color: rgb(230, 230, 230);
+      padding: 5px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+  <title>Exercise 10a - c</title>
+</head>
+<body>
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="request-now">Request now</button>
+  <button class="schedule-for-later" >Schedule for later</button>
+  <button class="js-button">Test</button>
+  
+  <script>
+    const testButton = document.querySelector(".js-button");
+
+    if (testButton) {
+      console.log(testButton.classList.contains('js-button'));
+    }
+  </script>
+</body>
+</html>

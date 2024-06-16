@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+
+      .toggle-button {
+        border: none;
+        padding: 8px 12px;
+        font-weight: bold;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+    </style>
+    <title>exercise 10d</title>
+  </head>
+  <body>
+    <button class="toggle-button gaming-button" onclick="toggle('.gaming-button', '.music-button', '.tech-button')      
+    ">Gaming</button>
+
+    <button class="toggle-button music-button" onclick="toggle('.music-button', '.tech-button', '.gaming-button')
+    ">Music</button>
+
+    <button class="toggle-button tech-button" onclick="toggle('.tech-button', '.gaming-button', '.music-button')
+    ">Tech</button>
+
+    <script src="exercise10d.js"></script>
+  </body>
+</html>

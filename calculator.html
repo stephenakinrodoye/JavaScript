@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="
+        updateCalculation(input = '1')">1
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '2')">2
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '3')">3
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '+')">+
+      </button>
+    </p>
+    
+    <p>
+      <button onclick="
+        updateCalculation(input = '4')">4
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '5')">5
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '6')">6
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '-')">-
+      </button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation(input = '7')">7
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '8')">8
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '9')">9
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '*')">*
+      </button>
+    </p>
+    
+    <p>
+      <button onclick="
+        updateCalculation(input = '0')">0
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '.')">.
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '=')">=
+      </button>
+
+      <button onclick="
+        updateCalculation(input = '/')">/
+      </button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation(input = 'clear')">clear
+      </button>
+    </p>
+    <script>
+      let calculation = '';
+
+      function updateCalculation (input) {
+        if (input === '=') {
+          calculation = eval(calculation);
+          console.log(calculation);
+        } else if (input === 'clear') {
+          calculation = ''
+          console.log('Cleared.')
+        } else {
+          calculation += input;
+          console.log(calculation);
+        }
+      }
+    </script>
+  </body>
+</html>
